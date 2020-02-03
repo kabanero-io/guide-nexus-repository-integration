@@ -6,7 +6,6 @@ permalink: /guides/nexus-repository-integration-with-appsody/
 :page-releasedate: 2020-01-20
 :page-description: Learn how to use Nexus Repository in Codewind
 :page-tags: ['Codewind', 'Java', 'Nodejs']
-:page-guide-category: basic
 = Nexus Repository Integration
 //
 //	Copyright 2020 IBM Corporation and others.
