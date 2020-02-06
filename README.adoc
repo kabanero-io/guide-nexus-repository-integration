@@ -76,9 +76,9 @@ The remainder of this guide will walk you through the steps required to configur
 
 . The development environment command line will output logs. Ensure you only see your proxy being used and not the official Maven repository (https://repo1.maven.org/maven2). For example, we want to see logs like: `[Docker] [INFO] Downloading from nexus: http://9.108.127.66:8081/repository/maven-public/org/apache/maven/maven-model/3.2.3/maven-model-3.2.3.jar`
 
-. Run `appsody stack add-to-repo sghung --release-url https://github.com/sghung/appsodystacks/releases/latest/download/` in your application stack root directory. Replace the repository with your own Github repository:
+. Run `appsody stack add-to-repo sghung --release-url https://github.com/sghung/appsodystacks/releases/latest/download/` in your Appsody stack root directory. Replace the repository with your own GitHub repository:
 
-. Go to `~/.appsody/stacks/dev.local`. By default, the development environment home is `~/.appsody`. Your generated files will be located here. The important files are:
+. Go to `~/.appsody/stacks/dev.local`. By default, the Appsody home is `~/.appsody`. Your generated files will be located here. The important files are:
     * `my-java-microprofile.v0.2.21.templates.default.tar.gz`
     * `sghung-index.yaml`
 
@@ -133,7 +133,7 @@ The application should go into a running state and can be used for development.
 
 . Go to the root directory of your stack and run `appsody stack package`.  For the purpose of this example, the publishing is done into the local dev.local and the images are not pushed to Docker hub. To push to Docker hub, follow the link:https://appsody.dev/docs/stacks/publish[Appsody publishing documentation].
 
-. Run `appsody stack add-to-repo sghung2 --release-url https://github.com/sghung/appsodystacks/releases/latest/download/` in your application stack root directory. Replace the repository with your own GitHub repository.
+. Run `appsody stack add-to-repo sghung2 --release-url https://github.com/sghung/appsodystacks/releases/latest/download/` in your Appsody stack root directory. Replace the repository with your own GitHub repository.
 
 . Upload your files as a release onto GitHub. For example: `https://github.com/sghung/appsodystacks/releases/tag/0.1.1`
 . Open Codewind and go to **Manage Template Sources**.
