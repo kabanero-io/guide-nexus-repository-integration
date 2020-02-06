@@ -78,7 +78,7 @@ The remainder of this guide will walk you through the steps required to configur
 
 . Run `appsody stack add-to-repo sghung --release-url https://github.com/sghung/appsodystacks/releases/latest/download/` in your Appsody stack root directory. Replace the repository with your own GitHub repository:
 
-. Go to `~/.appsody/stacks/dev.local`. By default, the Appsody home is `~/.appsody`. Your generated files will be located here. The important files are:
+. Go to `~/.appsody/stacks/dev.local`. By default, Appsody home is `~/.appsody`. Your generated files will be located here. The important files are:
     * `my-java-microprofile.v0.2.21.templates.default.tar.gz`
     * `sghung-index.yaml`
 
