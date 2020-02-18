@@ -40,20 +40,24 @@ The remainder of this guide will walk you through the steps required to configur
 ### Prerequisites
 
 
+Before you begin, make sure:
+
 - [Git is installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Clone this repository to your local machine: `git clone git@github.com:kabanero-io/guide-nexus-repository-integration.git`
--- This guide will reference this code. All references to this repository are under the `guide-nexus-repository-integration/code/` directory.
+   - This guide will reference this code. All references to this repository are under the `guide-nexus-repository-integration/code/` directory.
 - Have [Nexus Repository Manager 3 installed](https://help.sonatype.com/repomanager3/installation)
 - Your [Maven proxy has been setup on Nexus Repository Manager 3](https://help.sonatype.com/repomanager3/formats/maven-repositories)
 - [Appsody has been installed](https://appsody.dev/docs/getting-started/installation)
 - [Codewind has been installed](https://www.eclipse.org/codewind/gettingstarted.html) on either VS Code or Eclipse
 - [Docker is installed](https://docs.docker.com/install/)
 - [Maven is installed](https://maven.apache.org/install.html)
--- The `settings.xml` file with the server credentials is passed to the various Maven calls. However, on the final application stack image, the `settings.xml` file is removed after all the Maven calls are made to ensure the credentials are not shared outside of development.
+   - The `settings.xml` file with the server credentials is passed to the various Maven calls. However, on the final application stack image, the `settings.xml` file is removed after all the Maven calls are made to ensure the credentials are not shared outside of development.
 
 
 ### What to expect in this example
 
+
+In this example:
 
 - We will assume the IP address of your Nexus Repository Manager is at `http://9.108.127.66:8081` and your Maven public proxy URL is `http://9.108.127.66:8081/repository/maven-public/`. Do not use localhost as some Maven commands are run in a Docker container and localhost will not resolve correctly.
 - Your Nexus Repository Manager is using the default credentials with the user name `admin` and password `admin123`.
@@ -63,6 +67,8 @@ The remainder of this guide will walk you through the steps required to configur
 
 ### Steps
 
+
+Follow these steps:
 
 1. Create a new Application Stack by running `appsody stack create my-java-microprofile --copy incubator/java-microprofile` on your operating system terminal.
 1. Ensure you have your `settings.xml` file in your Maven home directory (e.g. `~/.m2`). An example `settings.xml` can be found in the cloned repo under `code/my-java-microprofile/image/project/settings.xml`.
@@ -77,7 +83,7 @@ The remainder of this guide will walk you through the steps required to configur
 - `code/my-java-microprofile/image/project/install-dev-deps.sh`
 - `code/my-java-microprofile/image/project/validate.sh`
 - `code/my-java-microprofile/image/Dockerfile-stack`
--- `io.takari:maven:wrapper` is changed to `io.takari:maven:0.6.1:wrapper` due to an authentication issue with the latest wrapper ([takari/maven-wrapper/issues/142](https://github.com/takari/maven-wrapper/issues/142))
+   - `io.takari:maven:wrapper` is changed to `io.takari:maven:0.6.1:wrapper` due to an authentication issue with the latest wrapper ([takari/maven-wrapper/issues/142](https://github.com/takari/maven-wrapper/issues/142))
 
 1. Go to the root directory of your stack and run `appsody stack package`.  For the purpose of this example, the publishing is done into the local dev.local and the images are not pushed to Docker hub. To push to Docker hub, see the [Appsody publishing documentation](https://appsody.dev/docs/stacks/publish)
 
@@ -110,9 +116,9 @@ The application should go into a running state and can be used for development.
 
 ### Prerequisites
 
-
-- Have [Nexus Repository Manager 3 installed](https://help.sonatype.com/repomanager3/installation)
-- Your [NPM proxy has been setup on Nexus Repository Manager 3](https://help.sonatype.com/repomanager3/formats/npm-registry)
+Before you begin, ensure that:
+- [Nexus Repository Manager 3 has been installed](https://help.sonatype.com/repomanager3/installation)
+- [NPM proxy has been set up on Nexus Repository Manager 3](https://help.sonatype.com/repomanager3/formats/npm-registry)
 - [Appsody has been installed](https://appsody.dev/docs/getting-started/installation)
 - [Codewind has been installed](https://www.eclipse.org/codewind/gettingstarted.html) on either VS Code or Eclipse
 - [Docker is installed](https://docs.docker.com/install/)
@@ -121,6 +127,8 @@ The application should go into a running state and can be used for development.
 
 ### What to expect in this example
 
+
+In this example:
 
 - We will assume the IP address of your Nexus Repository Manager is at http://9.108.127.66:8081 and your NPM public proxy URL is http://9.108.127.66:8081/repository/npm-all/. Do not use localhost as some Maven commands are run in a Docker container and localhost will not resolve correctly.
 - Your Nexus Repository Manager is using the default credentials with user name `admin` and password `admin123`
@@ -132,6 +140,8 @@ The application should go into a running state and can be used for development.
 
 ### Steps
 
+
+Follow these steps:
 
 1. Create a new Application Stack by running `appsody stack create my-nodejs-express --copy incubator/nodejs-express` on your operating system terminal.
 
