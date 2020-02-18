@@ -9,6 +9,7 @@ tags: ['Codewind', 'Java', 'Nodejs']
 guide-category:
 ---
 # Nexus Repository Integration
+<!--
 //
 //	Copyright 2020 IBM Corporation and others.
 //
@@ -23,8 +24,9 @@ guide-category:
 //	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //	See the License for the specific language governing permissions and
 //	limitations under the License.
-
+-->
 ## What you will learn
+
 
 Nexus Repository is a popular repository manager that provides a single source of truth for all of the software components used by the applications in an enterprise. It provides a single access and control point for Maven (Java), npm (Node JS) and other software dependencies. It can also be used to manage or govern dependencies, or reduce the build dependencies on multiple external repositories and internet access.
 
@@ -34,7 +36,9 @@ The remainder of this guide will walk you through the steps required to configur
 
 ## Creating an application stack that pulls from a Maven proxy
 
+
 ### Prerequisites
+
 
 - [Git is installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Clone this repository to your local machine: `git clone git@github.com:kabanero-io/guide-nexus-repository-integration.git`
@@ -50,12 +54,15 @@ The remainder of this guide will walk you through the steps required to configur
 
 ### What to expect in this example
 
+
 - We will assume the IP address of your Nexus Repository Manager is at `http://9.108.127.66:8081` and your Maven public proxy URL is `http://9.108.127.66:8081/repository/maven-public/`. Do not use localhost as some Maven commands are run in a Docker container and localhost will not resolve correctly.
 - Your Nexus Repository Manager is using the default credentials with the user name `admin` and password `admin123`.
 - You are creating a Maven project based on the java-microprofile stack.
 - The complete example can be found in this cloned repository under `code/my-java-microprofile/stack.yaml`. If you have not already cloned the repository, see the [Prerequisites](#prerequisites) section.
 
+
 ### Steps
+
 
 1. Create a new Application Stack by running `appsody stack create my-java-microprofile --copy incubator/java-microprofile` on your operating system terminal.
 1. Ensure you have your `settings.xml` file in your Maven home directory (e.g. `~/.m2`). An example `settings.xml` can be found in the cloned repo under `code/my-java-microprofile/image/project/settings.xml`.
@@ -97,9 +104,12 @@ The remainder of this guide will walk you through the steps required to configur
 
 The application should go into a running state and can be used for development.
 
+
 ## Creating an Application Stack that pulls from a NPM proxy
 
+
 ### Prerequisites
+
 
 - Have [Nexus Repository Manager 3 installed](https://help.sonatype.com/repomanager3/installation)
 - Your [NPM proxy has been setup on Nexus Repository Manager 3](https://help.sonatype.com/repomanager3/formats/npm-registry)
@@ -111,6 +121,7 @@ The application should go into a running state and can be used for development.
 
 ### What to expect in this example
 
+
 - We will assume the IP address of your Nexus Repository Manager is at http://9.108.127.66:8081 and your NPM public proxy URL is http://9.108.127.66:8081/repository/npm-all/. Do not use localhost as some Maven commands are run in a Docker container and localhost will not resolve correctly.
 - Your Nexus Repository Manager is using the default credentials with user name `admin` and password `admin123`
 - You are creating a Maven project based on the nodejs-express application stack.
@@ -118,7 +129,9 @@ The application should go into a running state and can be used for development.
 - For the NPM proxy, the logs do not show logs that it is pulling from the NPM proxy. Instead, browse the NPN proxy to ensure it is being populated.
 - The `sampleCredentials` file included in this example should not be checked into a repository. This file is just for this guide to show the format.
 
+
 ### Steps
+
 
 1. Create a new Application Stack by running `appsody stack create my-nodejs-express --copy incubator/nodejs-express` on your operating system terminal.
 
