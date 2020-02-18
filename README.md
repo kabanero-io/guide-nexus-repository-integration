@@ -8,7 +8,7 @@ description: Learn how to use Nexus Repository in Codewind
 tags: ['Codewind', 'Java', 'Nodejs']
 guide-category:
 ---
-# Nexus Repository Integration
+<!-- # Nexus Repository Integration -->
 <!--
 //
 //	Copyright 2020 IBM Corporation and others.
@@ -28,11 +28,11 @@ guide-category:
 ## What you will learn
 
 
-Nexus Repository is a popular repository manager that provides a single source of truth for all of the software components used by the applications in an enterprise. It provides a single access and control point for Maven (Java), npm (Node JS) and other software dependencies. It can also be used to manage or govern dependencies, or reduce the build dependencies on multiple external repositories and internet access.
+Nexus Repository is a popular repository manager that provides a single source of truth for all of the software components used by the applications in an enterprise. It provides a single access and control point for Maven (Java(tm)), npm (Node JS) and other software dependencies. It can also be used to manage or govern dependencies, or reduce the build dependencies on multiple external repositories and internet access.
 
 With an application stack, the owner of each stack can provide a default repository manager, force the use of a specific repository manager instance, or block the use of a repository manager. The current Java Microprofile and Node JS Express stacks restrict repository access, so if you want to use Nexus Repository you'll need to create your own stack. You can start by copying and customizing an existing stack rather than starting from scratch.
 
-The remainder of this guide will walk you through the steps required to configure a Nexus Repository for both a Java and Node JS stack. If you are not familiar with customizing stacks and collections, there is a [Working with Stacks guide](https://kabanero.io/guides/working-with-stacks) that provides some background and walks you through all of the required steps. If you're already familiar with customizing stacks and have your own, you may want to skip to steps 4 & 5 (for Maven) and steps 2-5 (for NPM) to focus just on the Nexus Repository configuration. Following these steps will create an application stack that uses Nexus Repository management for both development and build time of your applications.
+The remainder of this guide will walk you through the steps required to configure a Nexus Repository for both a Java and Node JS stack. If you are not familiar with customizing stacks, there is a [Working with Stacks guide](https://kabanero.io/guides/working-with-stacks) that provides some background and walks you through all of the required steps. If you're already familiar with customizing stacks and have your own, you may want to skip to steps 4 & 5 (for Maven) and steps 2-5 (for NPM) to focus just on the Nexus Repository configuration. Following these steps will create an application stack that uses Nexus Repository management for both development and build time of your applications.
 
 ## Creating an application stack that pulls from a Maven proxy
 
