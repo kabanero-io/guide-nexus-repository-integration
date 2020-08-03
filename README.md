@@ -168,12 +168,9 @@ Follow these steps:
 The application should go into a running state and can be used for development.
 
 ### Performance
-In some environments using a a Nexus Repository can improve build times. This is because the dependencies will now be closer to where the application is being built.
+In some environments using a a Nexus Repository can improve the speed of application build times. This is because the dependencies to download will be closer to where the application is being built.
 
-For example, here are some build step times for building an application with the java-openliberty appsody stack with IBM Cloud Pak for Apps on Openshift Container Platform.
-|                                   | Build Time (seconds) |
-|-----------------------------------|----------------------|
-| java-openliberty stack baseline           |          261            |
-| java-openliberty stack with a Nexus Repository |          168            |
+For example, building a microprofie application with the java-openliberty appsody stack with IBM Cloud Pak for Applications on Openshift Container Platform using Nexus improved build times by 35%.
+
 
 
