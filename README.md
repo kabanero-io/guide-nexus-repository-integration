@@ -166,3 +166,11 @@ Follow these steps:
 1. The application developer must put the .npmrc file into the root directory of the project. It should not be packaged up into the stack's template or be checked into the repository. The stack architect needs to inform the application developer that credentials are needed and securely share the credentials with the application developer. The contents of the `.npmrc` file will be the same as `code/my-nodejs-express/image/project/sampleCredentials`
 
 The application should go into a running state and can be used for development.
+
+### Performance
+In some environments using a a Nexus Repository can improve the speed of application build times. This is because the dependencies to download will be closer to where the application is being built.
+
+For example, building a microprofie application with the java-openliberty appsody stack with IBM Cloud Pak for Applications on Openshift Container Platform using Nexus improved build times by 35%.
+
+
+
